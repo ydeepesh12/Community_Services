@@ -1,0 +1,18 @@
+{
+  "name": "medicine-reminder-system",
+  "version": "1.0.0",
+  "description": "Medicine Reminder and Medication Tracking System for Elderly Patients and Caregivers",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,cyan\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "build:client": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
